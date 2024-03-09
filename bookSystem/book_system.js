@@ -21,7 +21,7 @@ function addBook() {
 }
 
 function showbooks() {
-    const booksDiv = books.map((book, index) => `<h1>book Number: ${index + 1}</h1><P><strong>Book Name: </strong>${book.name}</P><p><strong>Author Name:</strong> ${book.authorName} </p><p><strong>Book Description:</strong> ${book.bookDescription}</p><p><strong>No. of Pages:</strong> ${book.pagesNumber} mins</p>`);
+    const booksDiv = books.map((book, index) => `<h1>book Number: ${index + 1}</h1><P><strong>Book Name: </strong>${book.name}</P><p><strong>Author Name:</strong> ${book.authorName} </p><p><strong>Book Description:</strong> ${book.bookDescription}</p><p><strong>No. of Pages:</strong> ${book.pagesNumber} mins</p><p><button onclick="deleteItem(${index})"> 🧸💬  Delete Book</button></p>`);
     document.getElementById('books').innerHTML = booksDiv;
 }
 
@@ -30,4 +30,9 @@ function clearInputs() {
         document.getElementById('authorName').value = '';
         document.getElementById('bookDescription').value = '';
         document.getElementById('pagesNumber').value = '';
+}
+
+function deleteItem(index) {
+    books.splice(index, 1);
+    showbooks();
 }
