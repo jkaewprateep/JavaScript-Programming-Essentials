@@ -48,9 +48,9 @@
               <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#aboutUs">About us</a></li>
               <!-- <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#clients">Clients</a></li>
               <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#faq">Faq</a></li> -->
-              <input type="text" placeholder="Search..">
-              <button type="button" class="btn btn-primary order-1 order-lg-0">🔍Search</button>
-              <button type="button" class="btn btn-primary order-1 order-lg-0">🔄Reset</button>
+              <input id="SearchCountries" type="text" placeholder="Search..">
+              <button type="button" class="btn btn-primary order-1 order-lg-0" onclick="Search()">🔍Search</button>
+              <button type="button" class="btn btn-primary order-1 order-lg-0" onclick="Clear()">🔄Reset</button>
             </ul>
             <form class="ps-lg-5"><a class="btn btn-primary order-1 order-lg-0" href="#contactUs">CONTACT US</a></form>
           </div>
@@ -84,6 +84,13 @@
             <div class="col-md-6 text-center text-md-start mb-6">
               <h4 class="text-danger">ABOUT US</h4>
               <p class="my-5 fs-1 pe-xl-1 textalign_left"><b>The IT solutions and IT professional services</b> is our practical skills and priority by experience. Adaptive development with long term plannind and maintainance services. </p>
+              
+              <!-- ============================================-->
+              <p class="my-1 fs-1 pe-xl-1 textalign_left">Team member
+              <ul>
+                <li class="textalign_left">A Dekdee</li>
+              </ul></p>
+              <!-- ============================================-->
               <div class="card card-span bg-soft-primary border-start border-primary border-5 mt-3">
                 <div class="card-body">
                   <h4 class="lh-base px-lg-5 py-3 textalign_left">
@@ -136,19 +143,19 @@
                     <table>
                         <tr  class="textalign_left">
                           <td>Name</td>
-                          <td><input type="text" class="textalign_left" placeholder="Name.."></br></td>
+                          <td><input type="text" id="name_commeter" class="textalign_left" placeholder="Name.."></br></td>
                         </tr>
                         <tr  class="textalign_left">
                           <td>email</td>
-                          <td><input type="text" placeholder="email.."></br></td>
+                          <td><input type="text" id="email_commeter" placeholder="email.."></br></td>
                         </tr>
                         <tr  class="textalign_left">
                             <td>Message</td>
-                            <td><textarea id="textarea" name="comment_textarea" rows="4" cols="50"></textarea></td>
+                            <td><textarea id="comment_contact" placeholder="comment_contact" rows="4" cols="50"></textarea></td>
                         </tr>
                         <tr  class="textalign_right">
                             <td></td>
-                            <td><button type="button" class="btn btn-primary order-1 order-lg-0">📥Submit</button></td>
+                            <td><button type="button" onclick="Submit()" class="btn btn-primary order-1 order-lg-0">📥Submit</button></td>
                         </tr>
                     </table>
 
@@ -367,13 +374,13 @@
         <div class="container">
           <div class="row flex-center">
             <div class="col-md-6 col-xl-8 order-0">
-              <p class="text-center text-md-start">All rights Reserved &copy; Your Company, 2021</p>
+              <p class="text-center text-md-start">All rights Reserved &copy; DekDee, 2024</p>
             </div>
             <div class="col-md-6 col-xl-3 order-1">
               <p class="text-center text-md-end text-xl-start">Made with&nbsp;
                 <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#EE4D47" viewBox="0 0 16 16">
                   <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                </svg>&nbsp;by&nbsp;<a class="text-1000 fw-bold" href="https://themewagon.com/" target="_blank">ThemeWagon </a>
+                </svg>&nbsp;by&nbsp;<a class="text-1000 fw-bold" href="https://github.com/jkaewprateep/Portfolio/blob/main/README.md" target="_blank">jkaewprateep </a>
               </p>
               <ul class="list-unstyled list-inline mb-6 mb-md-0 text-center text-md-end text-xl-start">
                 <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/icons/i.png" alt="..." /></a></li>
