@@ -1,6 +1,9 @@
 var xhr = new XMLHttpRequest();
 var url = './travel_recommendation_api.json';
 
+//
+const countries_array = [ ];
+
 xhr.open('GET', url, true);
 xhr.responseType = 'json';
 
@@ -18,11 +21,19 @@ xhr.onload = function() {
         var cities = country.cities;
 
         
-
+        // cities = [ ];
         cities.forEach(function(city) {
             var city_name = city.name;
             var imageUrl = city.imageUrl;
             var description = city.description;
+
+            //
+            
+            // cities.appendChild({    name: city_name,
+            //                         image: imageUrl,
+            //                         description: description
+            //                     });
+            //
         
 
             console.log( "country_id: ", country_id );
@@ -100,6 +111,11 @@ xhr.onload = function() {
             
 
         });
+
+        countries_array.appendChild({   id: country_id, 
+            name: country_name,
+            cities : cities
+        })
     });
 }
 
