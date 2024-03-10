@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 🧸💬  TravelBroom</title>
+    <nav>
+        <a href="/html/">HTML</a> |
+        <a href="/css/">CSS</a> |
+        <a href="/js/">JavaScript</a> |
+        <a href="/python/">Python</a>
+        <input type="text" placeholder="Search..">
+        <button type="Search">Click Me!</button>
+        <button type="Reset">Click Me!</button>
+    </nav>
+</head>
+<body>
+    <h1> 🧸💬  TravelBroom</h1>
+    <label for="bookName"> 🐨🎁🎵🎶  Book Name:</label><br>
+    <input type="text" id="bookName"><br><br>
+    <label for="authorName">Author Name:</label><br>
+    <textarea id="authorName" rows="4"></textarea><br><br>
+    <label for="bookDescription">Book Description</label><br>
+    <textarea id="bookDescription" rows="4"></textarea><br><br>
+    <label for="pagesNumber">No. of Pages Time</label><br>
+    <input type="number" id="pagesNumber"><br><br>
+    <button onclick="addBook()"> 🧸💬  Add Book</button>
+
+    <h2> 🧸💬  books</h2>
+    <div id="books">
+        <!-- books will be displayed here -->
+    </div>
+    <script src="./book_system.js"></script>
+</body>
+</html>
