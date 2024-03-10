@@ -14,7 +14,8 @@ fetch(apiUrl)
   const weatherInfo = document.getElementById('weatherInfo');
   weatherInfo.innerHTML = `<h2>Weather in ${data.name}</h2>
                           <p> 🧸💬  Temperature: ${data.main.temp} 🌡️ ºF</p>
-                          <p> 🦭💬  Weather: ${data.weather[0].description}</p>`;
+                          <p> 🦭💬  Weather: ${data.weather[0].description}</p>
+                          <p> 🦭💬  🗺️ Location: latitude celcious on 44.34 and longtitude  celcious on 10.99</p>`;
 }).catch(error => {
     console.error('Error fetching weather:', error);
     const weatherInfo = document.getElementById('weatherInfo');
